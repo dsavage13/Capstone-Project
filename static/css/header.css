@@ -1,0 +1,63 @@
+header {
+    color: #FFFFFF;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    font-size: larger;
+}
+
+nav {
+    padding: 10px;
+    border-radius: 7px;
+}
+
+nav a {
+    color: #FF6600;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.nav-input{
+    border: none;
+    background: none;
+    color: #FF6600;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+}
+
+.nav-input:hover{
+    background-color: #FF6600;
+    color: #1C1C1C;
+    border-radius: 7px;
+    
+}
+
+nav a:hover {
+    background-color: #FF6600; 
+    color: #1C1C1C; 
+    border-radius: 7px;
+}
+
+
+/* Hamburger Button
+.nav-btn span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 6px auto;
+    background-color: white;
+}
+
+#nav-check, .nav-btn{
+    display: none;
+}
+
+.logo-container a h2{
+    color: white;
+}
+
+.center-header-sections{
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+} */

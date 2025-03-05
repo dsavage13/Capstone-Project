@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoBoard</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+
+</head>
+<body>
+    <header class="center-row">
+        <nav class="center-row">
+            <div class="nav-link center-row">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Search</a>
+            </div>
+            
+            <div class="nav-log-in center-row">
+                {% if user.is_authenticated %}
+                <a href="#">My Account</a>
+                <a href="#">Saved Listings</a>
+                <a href="#">Create Listing</a>
+
+                <form action="{% url 'logout' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="submit" class="nav-input" value="Log Out">
+                </form>
+                {% else %}
+                <a href="{% url 'login' %}">Login</a>
+                <a href="{% url 'signup' %}">Sign Up</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+
+
+</body>
+</html>
